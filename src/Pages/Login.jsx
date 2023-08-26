@@ -37,8 +37,9 @@ const Login = () => {
                 sessionStorage.setItem('user', userInfo.user.accessToken);
                 navigate('/');
 
-            } catch (error) {
+            } catch (error) {   
                 console.log(error);
+                alert('Something went wrong please try again')
             }
       }
 
@@ -54,7 +55,7 @@ const Login = () => {
                     <div className="flex flex-col justify-center items-center mt-10 md:mt-4 space-y-6 md:space-y-8">
                         <div className="relative flex  flex-col rounded-xl  group md:w-fit w-3/4">
                             <input
-                                type="text"
+                                type="email"
                                 placeholder="Email"
                                 id="email"
                                 name="email"
